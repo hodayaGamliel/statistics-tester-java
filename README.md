@@ -2,7 +2,7 @@
 
 Description
 ===========
-bash script - loop that run simple java program - and change variable/method name (create a nonce). 
+bash script - loop that runs simple java program - and change variable/method name (create a nonce). 
 
 
 Option 1 - on your machine:
