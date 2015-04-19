@@ -10,7 +10,7 @@ Option 1 - on your machine:
 requirement : java >= 6 , [Takipi](https://app.takipi.com/) .  
 
 clone this repository and run :
-./nonce_create.sh option times name_to_change(optional)**
+- ./nonce_create.sh option times name_to_change(optional)**
 
 Option 2 - use vagrant :
 ========================
