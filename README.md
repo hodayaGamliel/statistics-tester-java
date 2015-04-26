@@ -19,7 +19,7 @@ Option 2 - use vagrant :
 - vagrant ssh
 - cd /vagrant
 - change the key by using  "sudo ./change_secret_key.sh <YOUR_KEY>"
-- ./java_nonce_create.sh option times name_to_change(optional)**
+- ./java_nonce_create.sh new_dir times name_to_change(optional)**
 
 
 ** explain:
