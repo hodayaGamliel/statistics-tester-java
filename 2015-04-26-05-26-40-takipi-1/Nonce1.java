@@ -3,13 +3,13 @@ public class Nonce1
         public static void main(String[] args) throws Exception
         {
                         Thread.sleep(5000);
-                        throwExcep3();
+                        throwExcep2();
                         Thread.sleep(5000);
-                        throwExcep3();
+                        throwExcep2();
                         Thread.sleep(5000);
         }
 
-        public static void throwExcep3() throws Exception
+        public static void throwExcep2() throws Exception
         {
                 int nonce1 = 5;
                 System.out.println(nonce1);

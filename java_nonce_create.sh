@@ -3,11 +3,9 @@
 JAVA_FILE="Nonce1.java"
 CLASS_NAME="Nonce1"
 JAVA_OPTS="-agentlib:TakipiAgent"
-##option - 1 change the method name
-##option - 2 change the nonce name
 CURRENT_NAME="throwExcep1"
 #CURRENT_NAME="nonce1"
-NEW_DIR=1
+
 #set -x
 
 # This function get int value (number from the "cuurent name") and return this number+1
@@ -133,12 +131,12 @@ function run()
 
 function main()
 {
-  OPTION="$1"
+  NEW_DIR="$1"
   TIMES="$2"
   A="$3"
   check_if_entered_name $A
   FIRST_NAME=$CURRENT_NAME
-  option $OPTION
+
 
   for i in `seq 1 $TIMES`;
   do
