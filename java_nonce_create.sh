@@ -6,7 +6,15 @@ JAVA_OPTS="-agentlib:TakipiAgent"
 CURRENT_NAME="throwExcep1"
 #CURRENT_NAME="nonce1"
 
-#set -x
+set -x
+
+function log()
+{
+  DATE=`date +%Y-%m-%d-%H-%M-%S`
+  MESSAGE=$1
+
+  echo $DATE $MESSAGE  >> ./java_nonce_create.log
+}
 
 # This function get int value (number from the "cuurent name") and return this number+1
 function counter()
@@ -129,6 +137,29 @@ function run()
   run_java_program $NUM
 }
 
+function summarize()
+{
+  NEW_DIR="$1"
+  TIMES="$2"
+  log "On your dashboard should be appear"
+
+  if [ $CURRENT_NAME == "throwExcep1" ]; then
+    log "Big nonce - change the method name"
+    if [ $NEW_DIR == "1" ]; then
+        log "$TIMES different exceptions"
+        log "The class name Nonce1"
+        log "The method name throwExcep1 - throwExcep$TIMES"
+    elif [ $NEW_DIR == "2" ]; then
+        log "$TIMES times the same exception"
+        log "The class name Nonce1"
+        log "The method name throwExcep1 - throwExcep$TIMES"
+      fi
+  elif [ $CURRENT_NAME -eq "nonce1" ];then
+    log "Small nonce - change variable name"
+    log "$TIMES times the same exception"
+  fi
+}
+
 function main()
 {
   NEW_DIR="$1"
@@ -136,8 +167,7 @@ function main()
   A="$3"
   check_if_entered_name $A
   FIRST_NAME=$CURRENT_NAME
-
-
+  summarize $NEW_DIR $TIMES
   for i in `seq 1 $TIMES`;
   do
     echo run number: $i

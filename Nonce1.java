@@ -1,11 +1,11 @@
-public class Nonce1
+  public class Nonce1
 {
         public static void main(String[] args) throws Exception
         {
                         Thread.sleep(5000);
-                        throwExcep1();
-                        Thread.sleep(5000);
-                        throwExcep1();
+                        throwExcep5();
+                        Thread.sleep(500000);
+                        throwExcep5();
                         Thread.sleep(5000);
         }
 
